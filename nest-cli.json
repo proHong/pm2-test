@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/cluster-app/src",
+  "monorepo": true,
+  "root": "apps/cluster-appt",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/cluster-app/tsconfig.app.json"
+  },
+  "projects": {
+    "cluster-app": {
+      "type": "application",
+      "root": "apps/cluster-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/cluster-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cluster-app/tsconfig.app.json"
+      }
+    },
+    "logging-app": {
+      "type": "application",
+      "root": "apps/logging-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/logging-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/logging-app/tsconfig.app.json"
+      }
+    }
+  }
+}
